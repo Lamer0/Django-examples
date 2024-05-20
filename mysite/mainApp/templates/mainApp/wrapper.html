@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заголовок страницы</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+</head>
+<body>
+<div class="jumbotron">
+    <div class="container">
+        <h1>{% include "mainApp/includes/some_html.html" %}</h1>
+        {% block content %}
+        {% endblock %}
+        <button class="btn btn-primary">Синяя кнопка</button>
+        <button class="btn btn-success">Зеленая кнопка</button>
+        <img src="{% static 'mainApp/image/utka.jpg'%}" class="img-thumbnail">
+    </div>
+</div>
+</body>
+</html>
